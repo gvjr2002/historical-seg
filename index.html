@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+     const params = new URLSearchParams(window.location.search);
+     const accId = parseInt(params.get("id"));
+     const accountId = accId || 1112801;
+     console.log("Account-Id ->", accountId);
+     /* eslint-disable no-undef */
+window._vwo_code || (function() {
+var account_id=accountId,
+version=2.1,
+settings_tolerance=2000,
+hide_element='body',
+hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var i=this.getSettings(),n=d.createElement('script'),r=this;t=t||{};if(i){n.textContent=i;d.getElementsByTagName('head')[0].appendChild(n);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var i=this.hide_element(),n=i?i+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=n;else t.appendChild(d.createTextNode(n));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var n=d.createElement('div');n.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;';n.setAttribute('id','_vis_opt_path_hides');n.classList.add('_vis_hide_layer');t.parentNode.insertBefore(n,t.nextSibling)}var o='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:o})}else{this.load(o+'&x=true')}}};w._vwo_code=code;code.init();})();
+  window._vwo_pc_custom = {
+        a: 100,
+        t: 100
+    };	    
+	</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPA Ecommerce Test - VWO Historical Segmentation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #222; padding: 15px; color: white; text-align: center; }
+    nav a { margin: 10px; cursor: pointer; color: #007bff; text-decoration: underline; }
+    .page { display: none; padding: 20px; }
+    .active { display: block; }
+    .product { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 8px; }
+    button { padding: 10px 15px; cursor: pointer; }
+    .cart-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>SPA Ecommerce Test Page</h2>
+    <nav>
+      <a onclick="navigate('products')">Products</a>
+      <a onclick="navigate('cart')">Cart</a>
+      <a onclick="navigate('checkout')">Checkout</a>
+    </nav>
+  </header>
+
+  <!-- PRODUCT PAGE -->
+  <div id="products" class="page active">
+    <h2>Products</h2>
+    <div class="product">
+      <h3>Product A</h3>
+      <p>Price: $10</p>
+      <button onclick="addToCart('Product A', 10)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Product B</h3>
+      <p>Price: $20</p>
+      <button onclick="addToCart('Product B', 20)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Product C</h3>
+      <p>Price: $30</p>
+      <button onclick="addToCart('Product C', 30)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- CART PAGE -->
+  <div id="cart" class="page">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="total"></h3>
+    <button onclick="navigate('checkout')">Proceed to Checkout</button>
+  </div>
+
+  <!-- CHECKOUT PAGE -->
+  <div id="checkout" class="page">
+    <h2>Checkout</h2>
+    <p>Dummy checkout page for testing SPA segment transitions.</p>
+    <button onclick="alert('Order placed (mock)!')">Place Order</button>
+  </div>
+
+  <script>
+    let cart = [];
+
+    function navigate(page) {
+      window.location.hash = page;
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+    }
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      alert(name + ' added to cart');
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cart-items');
+      const totalBox = document.getElementById('total');
+      container.innerHTML = '';
+
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price;
+        container.innerHTML += `<div class='cart-item'>${item.name} - $${item.price}</div>`;
+      });
+
+      totalBox.innerText = 'Total: $' + total;
+    }
+
+    // Load correct page from hash
+    window.addEventListener('load', () => {
+      const page = window.location.hash.replace('#', '') || 'products';
+      navigate(page);
+    });
+
+    window.addEventListener('hashchange', () => {
+      const page = window.location.hash.replace('#', '') || 'products';
+      navigate(page);
+    });
+  </script>
+</body>
+</html>
