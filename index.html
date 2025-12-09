@@ -4,8 +4,16 @@
 	<script type="text/javascript">
      const params = new URLSearchParams(window.location.search);
      const accId = parseInt(params.get("id"));
-     const accountId = accId || 29000430;
+     const accountId = accId || 29000457;
      console.log("Account-Id ->", accountId);
+
+	window.VWO = window.VWO || [];
+window.VWO.push(['setSessionId', () => {
+  const sessionTimestamp = Math.floor(Date.now() / 1000);
+  console.log("returned value of sessionId timestamp:", sessionTimestamp);
+  return sessionTimestamp;
+}]);
+		
      /* eslint-disable no-undef */
 window._vwo_code || (function() {
 var account_id=accountId,
